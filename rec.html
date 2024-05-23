@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+</head>
+<style>
+    h1{
+        font-size: 35px;
+    }
+    div{
+            font-size: 35px;
+            text-align: center;
+            margin-top: 150px;
+            margin-left: 200px;
+        }
+        .side{
+            width: 90px;
+            height: 45px;
+            font-size: 35px;
+            text-align: center;
+            margin-top: 10px;
+
+        }
+
+    
+
+.btn {
+  appearance: button;
+  background-color:#626567;
+  border: solid transparent;
+  border-radius: 10px;
+  border-width: 0 1 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round;
+  margin: 13px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  font-size: 15px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 80%;
+}
+
+.btn:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 8px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.btn:main,
+.btn:focus {
+  user-select: auto;
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.btn:disabled {
+  cursor: auto;
+}
+
+</style>
+<body>
+    <script>
+        function rectangle(){
+            let a=+document.rectangle.a.value;
+            let b=+document.rectangle.b.value
+            let S=a*b
+            let area=document.getElementById("area");
+            let perimeter=document.getElementById("perimeter");
+            let P=(a+b)*2
+                string=S;
+                string1=P;
+        area.innerHTML = string;
+        perimeter.innerHTML = string1;
+}
+    </script>
+    <div >
+    <h1>Розрахунок площі та периметра прямокутника</h1> 
+       <form name="rectangle" action="javascript:rectangle()">
+     Довжина прямокутника:<input class="side" name="a" type="text" value="" size="4"><br>
+        Ширина прямокутника:<input class="side" name="b" type="text" value="" size="4"><br>          
+        <input class="btn" type="submit" value="Розрахувати">
+        <input class="btn" type="reset" name="reset" value="Скинути">
+       </form>
+       Площа прямокутника дорівнює: <span id="area"></span><br/>
+        Периметр прямокутника дорівнює: <span id="perimeter"></span>
+        </div>
+</body>
+</html>
